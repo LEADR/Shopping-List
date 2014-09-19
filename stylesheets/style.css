@@ -1,0 +1,24 @@
+#main-container {
+    width: 200px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+#input-container {
+    text-align: center;
+}
+
+input[type='checkbox'] {
+    float: left;
+}
+
+li {
+    clear: both;
+}
+
+.delete {
+    float: right;
+}
