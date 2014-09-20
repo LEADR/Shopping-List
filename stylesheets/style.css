@@ -1,13 +1,24 @@
 #main-container {
     width: 200px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .title {
     text-align: center;
 }
 
+#main-container {
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 #input-container {
     text-align: center;
+}
+
+#list-container {
+  margin: 
 }
 
 input[type='checkbox'] {
@@ -16,8 +27,17 @@ input[type='checkbox'] {
 
 li {
     clear: both;
+    padding: 5px 0;
+}
+
+.item {
+  padding-left: 5px;
 }
 
 .delete {
     float: right;
+}
+
+.checked {
+  text-decoration: line-through;
 }
