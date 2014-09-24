@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $('#add-item').on('click', function() {
+
+  // Adding List Items
+  var addListItem = function() {
     var text = $('#input-field').val();
 
     var checkbox = $('<input>').attr('type', 'checkbox');
@@ -10,6 +12,12 @@ $(document).ready(function() {
     $('#items-list').append(listItem);
 
     $('#input-field').val('');
+  };
 
+  $('#add-item').on('click', addListItem);
+  $('#input-field').keydown(function(event) {
+    if (event.which == '13') {
+      addLIstItem();
+    }
   });
 });
