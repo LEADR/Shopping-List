@@ -7,6 +7,7 @@ $(document).ready(function() {
       this.type = 'checkbox';
     }
 
+
     // assign properties to span
 
     // assign properties to delete button
@@ -14,11 +15,13 @@ $(document).ready(function() {
     // create li
     var listItem = document.createElement('li');
 
+    listItem.innerHTML('<input type="checkbox"><span class="item-name">'text'</span><input type="button" value="X" class="button delete">');
+
     // create checkbox
-    var check = document.createElement('input');
+    var check = document.createElement('input'[type='checkbox']);
 
     // create span
-    var itemName = document.createElement('span');
+    var itemName = document.createElement('span'["class"='item-name']);
 
     // create delete button
     var deleteButton = document.createElement('input');
