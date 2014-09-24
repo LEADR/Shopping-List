@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('add-item').on('click', function() {
+  $('#add-item').on('click', function() {
     var text = $('#input-field').val();
 
     // assign properties to checkbox
