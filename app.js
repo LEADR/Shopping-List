@@ -21,21 +21,22 @@ $(document).ready(function() {
     }
   });
 
-  // Change text-decoration via checkbox
+  // Checkbox functionality
   $('.checkbox').change(function(event) {
     var itemName = $(this).closest('li').children('.item-name');
 
-
-    if ( null /* change from null */
-      // check for "checked" on $(this)
-    ) {
+    if ($(this).prop('checked')) {
       $(itemName).addClass('checked');
     } else {
       $(itemName).removeClass('checked');
     }
   });
 
-  // Add delete button functionality
-  // Add confirmation alert
-    // Add "don't ask again" checkbox
+  // Delete button functionality
+  $('.delete').on('click', function() {
+    if (Window.confirm('Are you sure?')) {
+      $(this).closest('li').remove();
+      // Add "don't ask again" checkbox
+    }
+  });
 });
