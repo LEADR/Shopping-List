@@ -22,7 +22,7 @@ $(document).ready(function() {
   });
 
   // Checkbox functionality
-  $('.checkbox').change(function(event) {
+  $('ul').on('change', '.checkbox', function(event) {
     var itemName = $(this).closest('li').children('.item-name');
 
     if ($(this).prop('checked')) {
@@ -30,10 +30,12 @@ $(document).ready(function() {
     } else {
       $(itemName).removeClass('checked');
     }
+
+    console.log(event);
   });
 
   // Delete button functionality
-  $('.delete').on('click', function() {
+  $('ul').on('click', '.delete', function() {
     if (window.confirm('Are you sure?')) {
       $(this).closest('li').remove();
       // Add "don't ask again" checkbox
