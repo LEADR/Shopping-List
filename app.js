@@ -34,7 +34,7 @@ $(document).ready(function() {
 
   // Delete button functionality
   $('.delete').on('click', function() {
-    if (Window.confirm('Are you sure?')) {
+    if (window.confirm('Are you sure?')) {
       $(this).closest('li').remove();
       // Add "don't ask again" checkbox
     }
