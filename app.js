@@ -4,7 +4,7 @@ $(document).ready(function() {
   addListItem = function() {
     var text = $('#input-field').val();
 
-    var checkbox = $('<input>').attr('type', 'checkbox');
+    var checkbox = $('<input>').attr('type', 'checkbox').addClass('checkbox');
     var item = $('<span>').addClass('item-name').html(text);
     var deleteButton = $('<input>').attr('type', 'button').addClass('button').addClass('delete').val('X');
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
   });
 
   // Checkbox functionality
-  $('ul').on('change', '.checkbox', function(event) {
+  $('#items-list').on('change', '.checkbox', function(event) {
     var itemName = $(this).closest('li').children('.item-name');
 
     if ($(this).prop('checked')) {
@@ -30,8 +30,6 @@ $(document).ready(function() {
     } else {
       $(itemName).removeClass('checked');
     }
-
-    console.log(event);
   });
 
   // Delete button functionality
