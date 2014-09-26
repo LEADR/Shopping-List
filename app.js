@@ -39,19 +39,25 @@ $(document).ready(function() {
     $('#delete-window').css('visibility', 'hidden');
   };
 
+  // This code stores a cookie for the state of the checkbox.
   /* $('#dont-ask').change(function() {
     var checked = $('#dont-ask').prop('checked');
-    console.log(checked);
     $.cookie('dont-ask', checked);
-  }); */
+  });
+  */
 
   $('ul').on('click', '.delete', showWindow);
   $('ul').on('click', '.delete', function() {
     var listItem = $(this).closest('li');
     $('#confirm').on('click', function() {
-       if ($('#dont-ask').prop('checked')) {
+
+      // This event listener removes both showWindow and the anonymous function which follows it.
+      /*
+      if ($('#dont-ask').prop('checked')) {
         $('ul').off('click', '.delete', showWindow);
-      }
+        }
+      */
+
       $(listItem).remove();
       hideWindow();
     });
@@ -60,26 +66,4 @@ $(document).ready(function() {
       hideWindow();
     });
   });
-
-
-
-  /* // Delete button functionality
-  $('ul').on('click', '.delete', function() {
-
-    var listItem = $(this).closest('li');
-
-    if ($('#dont-ask').prop(':checked')) {
-      $(listItem).remove();
-    } else {
-      showWindow();
-      $('#confirm').on('click', function() {
-        $(listItem).remove();
-        hideWindow();
-      });
-
-      $('#cancel').on('click', function() {
-        hideWindow();
-      });
-    }
-  }); */
 });
