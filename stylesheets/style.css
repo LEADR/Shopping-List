@@ -1,16 +1,15 @@
 #main-container {
-  width: 100%;
+  margin: auto;
+  width: 300px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .title {
   text-align: center;
-}
-
-#main-container {
-  border: 2px solid orange;
-  border-radius: 10px;
-  padding: 10px;
 }
 
 #input-container {
