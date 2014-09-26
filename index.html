@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="stylesheets/simplegrid.css" type="text/css" />
   <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
   <script src='http://code.jquery.com/jquery-latest.js'></script>
+  <script src='jquery.cookie.js'></script>
   <script src="app.js"></script>
 </head>
 <body>
@@ -38,21 +39,29 @@
                 <input type="button" value="X" class="button delete">
               </li>
               <li>
-                <input type="checkbox"class='checkbox'>
+                <input type="checkbox" class='checkbox'>
                 <span class="item-name">Kale</span>
                 <input type="button" value="X" class="button delete">
                 </li>
               <li>
-                <input type="checkbox"class='checkbox'>
+                <input type="checkbox" class='checkbox'>
                 <span class="item-name">Spinach</span>
                 <input type="button" value="X" class="button delete">
               </li>
               <li>
-                <input type="checkbox"class='checkbox'>
+                <input type="checkbox" class='checkbox'>
                 <span class="item-name">Blueberries</span>
                 <input type="button" value="X" class="button delete">
               </li>
             </ul>
+          </div>
+          <div class="modal" id="delete-window">
+            <div id="modal-content">
+              <p>Are you sure?</p>
+              <button id="confirm">OK</button>
+              <button id="cancel">Cancel</button><br>
+              <input type="checkbox" id="dont-ask">Don't show this again.
+            </div>
           </div>
         </div>
       </div>

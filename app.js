@@ -32,11 +32,54 @@ $(document).ready(function() {
     }
   });
 
-  // Delete button functionality
+  var showWindow = function() {
+    $('#delete-window').css('visibility', 'visible');
+  };
+  var hideWindow = function() {
+    $('#delete-window').css('visibility', 'hidden');
+  };
+
+  /* $('#dont-ask').change(function() {
+    var checked = $('#dont-ask').prop('checked');
+    console.log(checked);
+    $.cookie('dont-ask', checked);
+  }); */
+
+  $('ul').on('click', '.delete', showWindow);
   $('ul').on('click', '.delete', function() {
-    if (window.confirm('Are you sure?')) {
-      $(this).closest('li').remove();
-      // Add "don't ask again" checkbox
-    }
+    var listItem = $(this).closest('li');
+    $('#confirm').on('click', function() {
+       if ($('#dont-ask').prop('checked')) {
+        $('ul').off('click', '.delete', showWindow);
+      }
+      $(listItem).remove();
+      hideWindow();
+    });
+
+    $('#cancel').on('click', function() {
+      hideWindow();
+    });
   });
+
+
+
+  /* // Delete button functionality
+  $('ul').on('click', '.delete', function() {
+
+    var listItem = $(this).closest('li');
+
+    if ($('#dont-ask').prop(':checked')) {
+      $(listItem).remove();
+    } else {
+      showWindow();
+      $('#confirm').on('click', function() {
+        $(listItem).remove();
+        hideWindow();
+      });
+
+      $('#cancel').on('click', function() {
+        hideWindow();
+      });
+    }
+  }); */
 });
