@@ -3,15 +3,15 @@ $(document).ready(function() {
   // Adding List Items
   addListItem = function() {
     var text = $('#input-field').val();
-
     var checkbox = $('<input>').attr('type', 'checkbox').addClass('checkbox');
     var item = $('<span>').addClass('item-name').html(text);
     var deleteButton = $('<input>').attr('type', 'button').addClass('button').addClass('delete').val('X');
-
     var listItem = $("<li>").append(checkbox).append(item).append(deleteButton);
-    $('#items-list').append(listItem);
 
-    $('#input-field').val('');
+    if (text) {
+      $('#items-list').append(listItem);
+      $('#input-field').val('');
+    }
   };
 
   $('#add-item').on('click', addListItem);
