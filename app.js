@@ -1,11 +1,13 @@
 $(document).ready(function() {
+  // 
+
 
   // Adding List Items
   addListItem = function() {
     var text = $('#input-field').val();
     var checkbox = $('<input>').attr('type', 'checkbox').addClass('checkbox');
     var item = $('<span>').addClass('item-name').html(text);
-    var deleteButton = $('<input>').attr('type', 'button').addClass('button').addClass('delete').val('X');
+    var deleteButton = $('<button>').addClass('delete').html('X');
     var listItem = $("<li>").append(checkbox).append(item).append(deleteButton);
 
     if (text) {

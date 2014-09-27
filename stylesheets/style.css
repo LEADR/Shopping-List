@@ -1,9 +1,14 @@
+body {
+  background-color: #FCF2CD;
+}
+
 #main-container {
   margin: auto;
-  width: 300px;
+  width: 400px;
   border: 2px solid orange;
   border-radius: 10px;
   padding: 10px;
+  background-color: #FFFADE;
   font-size: 22px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -16,12 +21,57 @@
   text-align: center;
 }
 
+#input-field {
+  height: 38px;
+  width: 338px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid #B9C19A;
+  padding: 5px;
+  background-color: #FCF2CD;
+  font-size: 24px;
+}
+
+#input-field:focus {
+  outline-style: none;
+}
+
+#input-field::-webkit-input-placeholder {
+  text-align: center;
+  color: #B9C19A;
+}
+
+#input-field::-moz-placeholder {
+  text-align: center;
+}
+
+#input-field:-moz-placeholder {
+  text-align: center;
+}
+
+#input-field:-ms-input-placeholder { 
+  text-align: center;
+}
+
+#add-item {
+  height: 38px;
+  width: 38px;
+  vertical-align: bottom;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 2px solid #B9C19A;
+  background-color: #E0E8B4;
+  font-size: 22px; 
+}
+#add-item:focus {
+  outline-style: none;
+}
+
 input[type='checkbox'] {
   float: left;
 }
 
 #list-container {
-  margin:
 }
 
 li {
@@ -35,6 +85,9 @@ li {
 
 .delete {
   float: right;
+  border-radius: 5px;
+  border: 2px solid red;
+  background-color: #F2636A;
 }
 
 .checked {
